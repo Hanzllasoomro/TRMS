@@ -1,5 +1,4 @@
-"use-strict";
-module.exports = {
+export default {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable("teachers", {
       id: { type: Sequelize.BIGINT, autoIncrement: true, primaryKey: true },
@@ -14,5 +13,5 @@ module.exports = {
 
   async down(queryInterface) {
     await queryInterface.dropTable("teachers");
-  }
-}
+  },
+};
